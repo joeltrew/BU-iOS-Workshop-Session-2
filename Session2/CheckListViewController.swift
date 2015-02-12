@@ -11,6 +11,16 @@ import UIKit
 class CheckListViewController: UITableViewController {
     
     var items = [CheckListItem]()
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+       var firstItem = CheckListItem()
+        firstItem.title = "New task"
+        items.append(firstItem)
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +34,8 @@ class CheckListViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        
+        return items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
