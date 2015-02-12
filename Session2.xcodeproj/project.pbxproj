@@ -13,6 +13,7 @@
 		FFAD78FE1A8CA58500CAFD2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAD78FD1A8CA58500CAFD2D /* Images.xcassets */; };
 		FFAD79011A8CA58500CAFD2D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAD78FF1A8CA58500CAFD2D /* LaunchScreen.xib */; };
 		FFAD790D1A8CA58500CAFD2D /* Session2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD790C1A8CA58500CAFD2D /* Session2Tests.swift */; };
+		FFAD79171A8CB58100CAFD2D /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD79161A8CB58100CAFD2D /* CheckListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FFAD79061A8CA58500CAFD2D /* Session2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Session2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAD790B1A8CA58500CAFD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAD790C1A8CA58500CAFD2D /* Session2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session2Tests.swift; sourceTree = "<group>"; };
+		FFAD79161A8CB58100CAFD2D /* CheckListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				FFAD78F61A8CA58500CAFD2D /* AppDelegate.swift */,
 				FFAD78F81A8CA58500CAFD2D /* CheckListViewController.swift */,
+				FFAD79161A8CB58100CAFD2D /* CheckListItem.swift */,
 				FFAD78FA1A8CA58500CAFD2D /* Main.storyboard */,
 				FFAD78FD1A8CA58500CAFD2D /* Images.xcassets */,
 				FFAD78FF1A8CA58500CAFD2D /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAD79171A8CB58100CAFD2D /* CheckListItem.swift in Sources */,
 				FFAD78F91A8CA58500CAFD2D /* CheckListViewController.swift in Sources */,
 				FFAD78F71A8CA58500CAFD2D /* AppDelegate.swift in Sources */,
 			);

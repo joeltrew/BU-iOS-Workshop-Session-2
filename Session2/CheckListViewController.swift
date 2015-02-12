@@ -9,6 +9,8 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
+    
+    var items = [CheckListItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
