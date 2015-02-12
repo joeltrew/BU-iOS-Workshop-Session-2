@@ -25,6 +25,7 @@ class CheckListViewController: UITableViewController {
         
         var thirdItem = CheckListItem()
         thirdItem.title = "New task 3"
+        thirdItem.ticked = true
         items.append(thirdItem)
     }
     
@@ -59,7 +60,11 @@ class CheckListViewController: UITableViewController {
         
         label.text = item.title
         
+        
+        configTick(cell, item: item)
         return cell
+        
+    
     }
     
     
@@ -68,11 +73,40 @@ class CheckListViewController: UITableViewController {
     
         if let cell = tableView.cellForRowAtIndexPath(indexPath){
             
-            println("User selected cell")
+            if let cell = tableView.cellForRowAtIndexPath(indexPath){
+                let item = items[indexPath.row]
+                configTick(cell, item: item)
+                
+            }
             
+            println("User selected cell")
+            let item = items[indexPath.row]
+            item.ticked = !item.ticked
+            
+            if item.ticked == true{
+            cell.accessoryType = .None
+                
+            } else {
+                cell.accessoryType = .Checkmark
+            }
+            
+        }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.reloadData()
+    }
+    
+    func configTick(cell: UITableViewCell, item: CheckListItem){
+        
+        if item.ticked == true{
+            cell.accessoryType = .Checkmark
+            
+        } else {
             cell.accessoryType = .None
         }
+
     }
+    
 }
 
 
