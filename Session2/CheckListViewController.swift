@@ -22,7 +22,7 @@ class CheckListViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 20
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -39,6 +39,15 @@ class CheckListViewController: UITableViewController {
         return cell
     }
     
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        if let cell = tableView.cellForRowAtIndexPath(indexPath){
+            
+            println("User selected cell")
+        }
+    }
 }
 
 
