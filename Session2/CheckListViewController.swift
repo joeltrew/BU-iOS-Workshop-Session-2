@@ -18,6 +18,14 @@ class CheckListViewController: UITableViewController {
        var firstItem = CheckListItem()
         firstItem.title = "New task"
         items.append(firstItem)
+        
+        var secondItem = CheckListItem()
+        secondItem.title = "New task 2"
+        items.append(secondItem)
+        
+        var thirdItem = CheckListItem()
+        thirdItem.title = "New task 3"
+        items.append(thirdItem)
     }
     
     
@@ -47,7 +55,9 @@ class CheckListViewController: UITableViewController {
 //            label.text = "Hello"
 //        }
         
-        label.text = "Hello"
+        let item = items[indexPath.row]
+        
+        label.text = item.title
         
         return cell
     }
