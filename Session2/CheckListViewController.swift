@@ -20,12 +20,21 @@ class CheckListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CheckItem") as UITableViewCell
+        
+        let label = cell.viewWithTag(99) as UILabel
+        
+//        if let cell = tableView.cellForRowAtIndexPath(indexPath){
+//            label.text = "Hello"
+//        }
+        
+        label.text = "Hello"
         
         return cell
     }
