@@ -46,6 +46,8 @@ class CheckListViewController: UITableViewController {
         if let cell = tableView.cellForRowAtIndexPath(indexPath){
             
             println("User selected cell")
+            
+            cell.accessoryType = .None
         }
     }
 }
